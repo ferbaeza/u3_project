@@ -1,0 +1,11 @@
+.main{
+    background-color: rgb(59, 61, 61);
+
+}
+
+.top_nav{
+    background-color: rgb(43, 46, 46);
+}
+li .bot_nav{
+    display: inline;
+}
