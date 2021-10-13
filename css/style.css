@@ -39,3 +39,21 @@ ul {
   .carrito{
       float: right;
   }
+  .login{
+      width: 30%;
+      height: 20%;
+      margin: 0 auto;
+      color: floralwhite;
+      font-size: 19px;
+  }
+  .register{
+    width: 30%;
+    height: 20%;
+    margin: 0 auto;
+    color: floralwhite;
+    font-size: 19px;
+}
+  label{
+    text-align: center;
+    font-size: 18px;
+}
