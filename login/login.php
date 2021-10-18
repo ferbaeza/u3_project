@@ -7,7 +7,6 @@
     
 </head>
 <body>
-    <?php include_once "../bbdd/conexion.php"?>
     <?php include_once "../header_footer/header.php"?>
     <div class="login">
         <fieldset style="background-color: darkcyan">
