@@ -1,8 +1,9 @@
 .top_nav{
     background-color: rgb(43, 46, 46);
-    width: 50%;
+    width: 80%;
     height: max-content;
     margin: 0 auto;
+    border-radius: 7px;
 }
 ul {
     list-style-type: none;
@@ -10,6 +11,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    border-radius: 7px;
   }
   
 li {
@@ -33,6 +35,6 @@ li a:hover {
 background-color: #111;
 }
 
-.carrito{
+.carrito, .login{
     float: right;
 }
