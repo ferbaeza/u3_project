@@ -8,14 +8,14 @@
     <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
-    <?php include_once "../../pages/header_footer/header.php"?>
+    <?php include_once "../../pages/header_footer/register_header.php"?>
     <div class="login_form">
         <h2>Thanks to join us!</h2>
-        <form class="formulario" action="" method="POST">
-        <input name="name" placeholder="Username"/><br>
-        <input name="pass" placeholder="Password"/><br>
-        <input name="mail" placeholder="eMail"/><br>
-        <input name="phone" placeholder="Telephone"/><br>
+        <form class="formulario" onsubmit="return doRegister();" method="POST">
+        <input id="name" name="name" placeholder="Username"/><br>
+        <input id="pass" name="pass" placeholder="Password"/><br>
+        <input id="mail" name="mail" placeholder="eMail"/><br>
+        <input id="phone" name="phone" placeholder="Telephone"/><br>
         <button id="btn-log" type="submit" name="submit">Submit</button><br>
         </form>
     </div>
