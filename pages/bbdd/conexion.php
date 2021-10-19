@@ -6,8 +6,15 @@
 
 
     //conexion en bbdd
+    
+try{
 
-    $mysqli = new mysqli($server, $user, $password, $database);
+    $conecta = new PDO($server, $user, $password, $database);
+
+}catch (PDOException $e){
+
+    echo "Error de conexion" . $e->getMessage();
+}
 
 
 ?>
