@@ -6,13 +6,11 @@
 
 
     //conexion en bbdd
-    
 try{
-
-    $conecta = new PDO($server, $user, $password, $database);
+    $bd = new PDO($server, $user, $password, $database);
+    echo "Conexión realizada con éxito<br>";
 
 }catch (PDOException $e){
-
     echo "Error de conexion" . $e->getMessage();
 }
 
