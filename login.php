@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>U3_Project</title>
-    <link href="../../css/header.css" rel="stylesheet" type="text/css">
-    <link href="../../css/login.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="login.js"></script>
+    <link href="./css/header.css" rel="stylesheet" type="text/css">
+    <link href="./css/login.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./pages/login/login.js"></script>
 </head>
 <body>
-    <?php include_once "../header_footer/header.php"?>
+    <?php include_once "./pages/header_footer/main_header.php"?>
     <div class="login_form">
         <h2>Start with your user and password</h2>
         <form class="formulario" onsubmit="return doLogin();" method="POST">
@@ -25,7 +25,7 @@
     </div>
     <div class="register">
     <h4>If you dont have any account join us here</h4><br>
-    <a href="../register/register.php"><button id="btn-reg" type="submit" name="submit"><span>Register</span></button></a>
+    <a href="./pages/register/register.php"><button id="btn-reg" type="submit" name="submit"><span>Register</span></button></a>
 
 
 

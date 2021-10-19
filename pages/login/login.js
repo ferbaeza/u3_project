@@ -7,26 +7,19 @@ function doLogin(){
                 document.getElementById("login-ko").style.display="block";
 			}else{
                 document.getElementById("login-ok").style.display="block";
-
-				//redirigir a home		
-                window.location.href = "home.php";
+                window.location.href = "index.php";
 			}
 		}
 	}
+   
+    document.getElementById("login-ko").style.display="none";   //Oculto los mensajes de error del login
+	let name = document.getElementById("name").value;   //Recogemos los datos del formulario
+	let pass = document.getElementById("pass").value;
+    let login_info= "name="+name+"&pass="+pass;
 
-    //Oculto los mensajes de error del login
-    document.getElementById("login-ko").style.display="none";
-
-    //Monto los parámetros de la llamada
-	let email = document.getElementById("email").value;
-	let password = document.getElementById("password").value;
-	var params = "email="+email+"&password="+password;
-
-	xhttp.open("POST", "../controllers/login/do_login.php", true);	
-
-	// envío con POST requiere cabecera y cadena de parámetros
-	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xhttp.send(params);	
+	xhttp.open("POST", "./do_login.php", true);	
+	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");// envío con POST requiere cabecera y cadena de parámetros
+	xhttp.send(login_info);	
 
 	return false;
 }	
