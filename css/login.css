@@ -86,3 +86,8 @@ button:hover span:after {
   opacity: 1;
   right: 0;
 }
+.copyright{
+  color: whitesmoke;
+  text-align: center;
+  font-size: large;
+}

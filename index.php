@@ -13,7 +13,7 @@
     
     <div class="main_index">
         <a href="./pages/login/login.php"><img id="logo_index" src="./img/index_logo.png"></a>
-        <p>Click here to login and start to enjoy</p>
+        <p>Click the image and start to enjoy</p>
 
     </div>
 
