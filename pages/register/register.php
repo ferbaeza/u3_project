@@ -17,6 +17,11 @@
         <input id="mail" name="mail" placeholder="eMail"/><br>
         <input id="phone" name="phone" placeholder="Telephone"/><br>
         <button id="btn-log" type="submit" name="submit">Submit</button><br>
+            
+        <p id="registro" style="display: none;">Registrado correctamente correcto!</p>
+        <p id="noregistro" style="display: none;">¡Error! Su usuario ya esta registrado</p>
+
+
         </form>
     </div>
 

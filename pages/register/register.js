@@ -3,16 +3,16 @@ function doRegister(){
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			
-			if(this.responseText==="FALSE"){
-                document.getElementById("login-ko").style.display="block";
+			if(this.responseText==="TRUE"){
+                document.getElementById("noregistro").style.display="block";
 			}else{
-                document.getElementById("login-ok").style.display="block";
-                window.location.href = "../../index.php";
+                document.getElementById("registro").style.display="block";
+                window.location.href = "../login/login.php";
 			}
 		}
 	}
    
-    document.getElementById("login-ko").style.display="none";   //Oculto los mensajes de error del login
+    document.getElementById("noregistro").style.display="none";   //Oculto los mensajes de error del login
 	let name = document.getElementById("name").value;   //Recogemos los datos del formulario
 	let pass = document.getElementById("pass").value;
     let pass = document.getElementById("mail").value;
