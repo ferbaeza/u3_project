@@ -5,7 +5,7 @@
     <title>U3_Project</title>
     <link href="../../css/header.css" rel="stylesheet" type="text/css">
     <link href="../../css/login.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="register.js"></script>
 </head>
 <body>
     <?php include_once "../../pages/header_footer/register_header.php"?>
