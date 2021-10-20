@@ -12,7 +12,7 @@
     <?php include_once "../header_footer/login_header.php"?>
     <div class="login_form">
         <h2>Start with your user and password</h2>
-        <form class="formulario" onsubmit="return doLogin();" method="POST">
+        <form class="formulario" onsubmit="return doLogin()" method="POST">
             <input id="name" name="name">
             <input id="pass" name="pass">
             <button type="submit" name="submit" id="btn-log">Login</button><br>

@@ -2,12 +2,24 @@ function doLogin(){
 	var xhttp = new XMLHttpRequest();				
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			
+
+
+			/*
+			let answer = JSON.parse(this.responseText);
+			if(response.status=="OK"){
+                document.getElementById("login-ko").style.display="block";
+			}else if(response.status=="KO"){
+                document.getElementById("login-ok").style.display="block";
+                window.location.href = "../consolas/main.php";
+			}else if(response.status=="EXIST"){
+				alert("This mail is already used");
+			}
+			*/
 			if(this.responseText==="FALSE"){
                 document.getElementById("login-ko").style.display="block";
 			}else{
                 document.getElementById("login-ok").style.display="block";
-                window.location.href = "../consolas/main.php";
+                //window.location.href = "../consolas/main.php";
 			}
 		}
 	}
