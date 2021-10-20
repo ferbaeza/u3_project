@@ -19,7 +19,7 @@ function doLogin(){
                 document.getElementById("login-ko").style.display="block";
 			}else{
                 document.getElementById("login-ok").style.display="block";
-                //window.location.href = "../consolas/main.php";
+                window.location.href = "../consolas/main.php";
 			}
 		}
 	}

@@ -1,28 +1,27 @@
 <?php
+session_start();
+session_destroy();
 require_once "../bbdd/conexion.php";
 $user= $_POST['name'];
 $pass = $_POST['pass'];
 
-/*
-$login = $bd->prepare("SELECT * FROM user where usuario= '$user' and passwd= '$pass'");
-$control = $login->execute();
-$result = $control->fetchAll();
-foreach ($result as $line){
-    if($line['user'] == $user and $line['passwd'] == $pass){
-        echo "<script>alert ('OK');</script>";
-    }
+
+$login = $bd->prepare("SELECT * FROM user where user = :user and passwd = :pass ");
+
+$login->bindParam(':user', $user);
+$login->bindParam(':pass', $pass);
+
+$login->execute();
+
+$a= $login->rowCount();
+if ($a==1){
+	session_start();
+	$_SESSION['user_loged']=$user;
+	echo $_SESSION['user_loged'];
+	echo "TRUE";
+}else{
+	echo "FALSE";
 }
-
-*/
-if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-
-    if($user=="fer" && $pass=="1")
-		echo "TRUE";
-	else
-		echo "FALSE";
-
-}
-
 
 
 ?>

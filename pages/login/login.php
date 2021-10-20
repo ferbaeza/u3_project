@@ -18,7 +18,7 @@
             <button type="submit" name="submit" id="btn-log">Login</button><br>
             
             <p id="login-ok" style="display: none;">¡Login correcto!</p>
-            <p id="login-ko" style="display: none;">¡Login incorrecto! Comprueba el email y la contraseña</p>
+            <p id="login-ko" style="display: none;">¡Login incorrecto! Comprueba tu usuario y contraseña</p>
 
             <p class="copyright">©Proyecto U3 Henry_Fer Daw2_2021</p>
 
