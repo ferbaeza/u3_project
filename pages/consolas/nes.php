@@ -13,6 +13,22 @@
         <h1>Nintendo</h1>
 
 
+<?php
+    require_once "../bbdd/conexion.php";
+
+/*
+    $con_nes = $bd->prepare("SELECT * FROM game WHERE game.id_console=1; ");
+    $con_nes->execute();
+    $results = $con_nes->fetchAll(PDO::FETCH_ASSOC);
+    $json_nes = json_encode($results);
+    $j_nes = json_decode($json_nes);
+    while ($row = $j_nesj->fetch()) {
+        print_r($row);
+    }    
+*/
+?>
+
+
     </div>
 
 

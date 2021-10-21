@@ -3,7 +3,7 @@
 //conexion en bbdd  con libreria PDO se utiliza esta sentencia
 
 
-$cadena_conexion = 'mysql:dbname=fer;host=127.0.0.1';
+$cadena_conexion = 'mysql:dbname=tiendaretro;host=127.0.0.1';
 $usuario = 'root';
 $clave = '';
 try {
