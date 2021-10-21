@@ -7,7 +7,7 @@ function doRegister(){
                 document.getElementById("noregistro").style.display="block";
 			}else{
                 document.getElementById("registro").style.display="block";
-				alert("<h1>User register!!</h1>"); 
+				alert("User register!!"); 
                 window.location.href = "../login/login.php";
 			}
 		}
