@@ -6,11 +6,20 @@ $pass = $_POST['pass'];
 
 $login = $bd->prepare("SELECT * FROM user where user = :user and passwd = :pass ");
 
+/*
+$params = array(
+	':user' => $user,
+	':pass' => $pass
+);
+$login->execute($params);
+*/
+
+
 $login->bindParam(':user', $user);
 $login->bindParam(':pass', $pass);
 $login->execute();
-
 $a= $login->rowCount();
+
 if ($a==1){
 	session_start();
 	$_SESSION['user_loged']=$user;
