@@ -14,6 +14,8 @@
         <form class="formulario" onsubmit="return doRegister()" method="POST">
         <input id="name" name="name" placeholder="Username"/><br>
         <input id="pass" name="pass" placeholder="Password"/><br>
+        <input id="mail" name="mail" placeholder="eMail"/><br>
+        <input id="phone" name="phone" placeholder="Phone number"/><br>
         <button id="btn-log" type="submit" name="submit">Submit</button><br>
             
         <p id="registro" style="display: none;">Registrado correctamente correcto!</p>

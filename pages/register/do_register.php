@@ -2,8 +2,8 @@
 require_once "../bbdd/conexion.php";
 $user= $_POST['name'];
 $pass = $_POST['pass'];
-//$mail = $_POST['mail'];
-//$phone = $_POST['phone'];
+$mail = $_POST['mail'];
+$phone = $_POST['phone'];
 
 
 $new_user = $bd->prepare("SELECT * FROM user where user = :user and passwd= :pass");
@@ -20,13 +20,13 @@ try{
     }else{
         //$reg = $bd->prepare("INSERT INTO user (user, mail, phone_number, passwd) VALUES (:user, :mail, :phone, :pass)");
 
-        $reg = $bd->prepare("INSERT INTO user (user, passwd) VALUES (:user, :pass)");
-        $reg->bindParam(':user', $user);
-        $reg->bindParam(':pass', $pass);
+        $reg = $bd->prepare("INSERT INTO user (user, passwd, mail, phone_number) VALUES (:user, :pass, :mail, :phone)");
+        //$reg->bindParam(':user', $user);
+        //$reg->bindParam(':pass', $pass);
         //$reg->bindParam(':mail', $mail);
         //$reg->bindParam(':phone', $phone);
 
-        $reg->execute();
+        $reg->execute(array(':user'=> $user, ':pass'=> $pass, ':mail'=> $mail, ':phone'=>$phone));
         echo "TRUE";
     }
 }catch(exception $e){

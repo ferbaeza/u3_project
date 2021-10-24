@@ -10,7 +10,7 @@
 <body>
     <?php include_once "../../pages/header_footer/main_header.php"?>
     <div class="main">    
-        <h1>Nintendo</h1>
+    <h1>Nintendo</h1>
 
 
 <?php
@@ -36,7 +36,12 @@
         
     }
 
-    $results = $con_nes->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
+
+
 
 
 

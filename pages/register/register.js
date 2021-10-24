@@ -17,10 +17,10 @@ function doRegister(){
 	
 	let name = document.getElementById("name").value;   //Recogemos los datos del formulario
 	let pass = document.getElementById("pass").value;
-	//let pass = document.getElementById("mail").value;
-	//let pass = document.getElementById("phone").value;
-    //let registro_info= "name="+name+"&pass="+pass+"&mail="+mail+"&phone="+phone;
-	let registro_info= "name="+name+"&pass="+pass; //+"&mail="+mail;
+	let pass = document.getElementById("mail").value;
+	let pass = document.getElementById("phone").value;
+    let registro_info= "name="+name+"&pass="+pass+"&mail="+mail+"&phone="+phone;
+	//let registro_info= "name="+name+"&pass="+pass; //+"&mail="+mail;
 
 	xhttp.open("POST", "./do_register.php", true);	
 	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");// envío con POST requiere cabecera y cadena de parámetros
