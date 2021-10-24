@@ -1,4 +1,6 @@
 <?php
+require_once "../bbdd/conexion.php";
+
 session_start();
 $username = $_SESSION['user_loged'];
 
