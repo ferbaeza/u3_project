@@ -5,7 +5,7 @@ require_once "../bbdd/conexion.php";
 try{
 	$bd= bbddConexion();
 	$user= $_POST['name'];
-	$pass = $_POST['pass'];
+	$pass = $_POST['pass'];	//es necesario cambiar en bbdd los datos de la tabla user(name=user y subname=passwd)
 	if(!is_null($bd)){
 		$login = $bd->prepare("SELECT * FROM user where user = :user and passwd = :pass ");
 

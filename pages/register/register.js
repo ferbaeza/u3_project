@@ -8,7 +8,7 @@ function doRegister(){
 			}else{
                 document.getElementById("registro").style.display="block";
 				alert("User register!!"); 
-                //window.location.href = "../login/login.php";
+                window.location.href = "../login/login.php";
 			}
 		}
 	}

@@ -1,11 +1,15 @@
 function loadConsole(console, consolas) {
     let gameConsole='<div>';
-    gameConsole+='<div>';
+    gameConsole+='<a href="../consolas/get_games.php?id='+console.id_console+'><div class="mos">';
     
-    //console+='<th scope="console"><button>'+console.id_console+'</button></th>';
-    gameConsole+='<div>'+console.name+'</div>';
-    gameConsole+='<div>'+console.made_in+'</div>';
-    gameConsole+='</div>';
+    let btnConsole='<div>';
+    btnConsole+='<button class="btnConsole">'+console.id_console+'</button>';
+    btnConsole+='<div>';
+
+    gameConsole+=btnConsole;
+
+    gameConsole+='<div><h2>'+console.name+'</h2></div>';
+    gameConsole+='</div></a>';
 
     consolas.innerHTML+=gameConsole;
 }
