@@ -8,7 +8,7 @@
     <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
-    <?php include_once "../header_footer/header.php"?>
+    <?php include_once "../../pages/header_footer/main_header.php"?>
     <div class="main">    
         <h1>Shopping Cart</h1>
 

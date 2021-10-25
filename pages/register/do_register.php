@@ -1,32 +1,69 @@
 <?php
-require_once "./bbdd/conexion.php";
-$user= $_POST['name'];
-$pass = $_POST['pass'];
-$mail = $_POST['mail'];
-$phone = $_POST['phone'];
+require_once "../bbdd/conexion.php";
 
+try{
+    $bd = bbddConexion();
 
-$register = $bd->prepare("SELECT * FROM user where user = '$user'");
-$control = $bd->execute($login);
-$row_cnt = $control->num_rows;
+    if(!is_null($bd)){
 
-if ($row_cnt == 0){
-    $sql = $bd->prepare ("INSERT INTO usuario(usuario,contraseña) VALUES ('$usuario', '$pass')");
-    $registro = $bd->execute($sql);
-    echo' <div class="main"> <h1> Registrado</h1></div>';
-    echo"<div class='main'><a href='login.html'><button>Acceder</button></a>";
-    echo "<a href='index.html'><button>Inicio</button></a></div>";
+        $user= $_POST['name'];
+        $pass = $_POST['pass'];
+        $mail = $_POST['mail'];
+        $phone = $_POST['phone'];
+        
+        $new_user = $bd->prepare("SELECT * FROM user where user = :user and passwd= :pass");
+
+        $new_user->bindParam(':user', $user);
+        $new_user->bindParam(':pass', $pass);
+        $new_user->execute();
+        $new = $new_user->rowCount();
+
+        if ($new==1){
+            echo "FALSE";
+        }else{   
+            $reg = $bd->prepare("INSERT INTO user (user, passwd, mail, phone_number) VALUES (:user, :pass, :mail, :phone)");
+            //$reg->bindParam(':user', $user);
+            //$reg->bindParam(':pass', $pass);
+            //$reg->bindParam(':mail', $mail);
+            //$reg->bindParam(':phone', $phone);
+            $reg->execute(array(':user'=> $user, ':pass'=> $pass, ':mail'=> $mail, ':phone'=>$phone));
+            echo "TRUE";
+        }
+    
 }
-else{
-    echo '<script type="text/javascript">
-        alert("Usuario ya existe");
-        </script>';
-        echo'<div class="main"><h1>Lo sentimos</h1></div>';
-        echo'<div class="main"><h4>Usuario ya existe</h4></div>';
-        echo'<div class="main"><a href="registro.html"><button>Registro</button></a>';
-        echo'<a href="index.html"><button>Inicio</button></a></div>';
-
-
-
+}catch (exception $e) {
+	echo 'Error con la base de datos: ';
 }
 
+
+
+/*
+$new_user = $bd->prepare("SELECT * FROM user where user = :user and passwd= :pass");
+
+$new_user->bindParam(':user', $user);
+$new_user->bindParam(':pass', $pass);
+$new_user->execute();
+$new = $new_user->rowCount();
+
+
+try{
+    if ($new==1){
+        echo "FALSE";
+    }else{
+        //$reg = $bd->prepare("INSERT INTO user (user, mail, phone_number, passwd) VALUES (:user, :mail, :phone, :pass)");
+
+        $reg = $bd->prepare("INSERT INTO user (user, passwd, mail, phone_number) VALUES (:user, :pass, :mail, :phone)");
+        //$reg->bindParam(':user', $user);
+        //$reg->bindParam(':pass', $pass);
+        //$reg->bindParam(':mail', $mail);
+        //$reg->bindParam(':phone', $phone);
+
+        $reg->execute(array(':user'=> $user, ':pass'=> $pass, ':mail'=> $mail, ':phone'=>$phone));
+        echo "TRUE";
+    }
+}catch(exception $e){
+    echo $e->getMessage();
+}
+*/
+
+?>

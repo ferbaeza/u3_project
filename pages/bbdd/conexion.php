@@ -1,21 +1,52 @@
 <?php
-    $server = "localhost";
-    $user = "root";
-    $password = "";
-<<<<<<< HEAD
-    $database = "tiendaretro"; //Hay que modificar el nombre de la base de datos a la que vayamos a consultar
+//conexion en bbdd  con libreria PDO se utiliza esta sentencia
 
+function bbddConexion(){
+    $cadena_conexion = 'mysql:dbname=tiendaretro;host=127.0.0.1';
+    $usuario = 'root';
+    $clave = '';
+    try {
+        $bd = new PDO($cadena_conexion, $usuario, $clave);
+    } catch (PDOException $e) {
+        echo 'Error con la base de datos: ' . $e->getMessage();
+    }
+    return $bd;
+}
 
-=======
-    $database = "fer"; //Hay que modificar el nombre de la base de datos a la que vayamos a consultar
->>>>>>> fer
-    //conexion en bbdd
-try{
-    $bd = new PDO($server, $user, $password, $database);
-    echo "Conexión realizada con éxito<br>";
+function getGames() {
+    try {
+    	$bd = bbddConexion();
 
-}catch (PDOException $e){
-    echo "Error de conexion" . $e->getMessage();
+        if(!is_null($bd)) {
+            $sql = $bd->prepare("SELECT * from game WHERE id_console = 1");
+            $sql->execute();
+            return $sql->fetchAll();
+        } else
+            return $bd;
+
+    } catch (PDOException $e) {
+       return null;
+    }
+}
+
+function getGamesId($id) {
+    try {
+    	$bd = bbddConexion();
+
+        if(!is_null($bd)) {
+            $sql = $bd->prepare("SELECT * from game WHERE id_console = :id_console");
+            $params = array(
+                ':id' => $id,
+            );
+            $sql->execute($params);
+
+            return $sql->fetchAll();
+        } else
+            return $bd;
+
+    } catch (PDOException $e) {
+       return null;
+    }
 }
 
 
