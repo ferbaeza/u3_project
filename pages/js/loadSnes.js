@@ -53,7 +53,7 @@ function loadSnes() {
             }
 		}
 	}
-	xhttp.open("GET", "../consolas/get_games.php?id=$id", true);	
+	xhttp.open("GET", "../consolas/get_games.php?", true);	
 	xhttp.send();	
 }
 //-------------------------------------

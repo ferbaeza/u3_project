@@ -13,10 +13,6 @@
         <div class="supernes">
             <h1>Super Nintendo</h1>
             <p>Los mejores juegos de la segunda consola de Nintendo</p>
-
-        <!--<button type="button" class="snes_refresh" onclick="loadFilms()">
-            Refrescar
-        </button>-->
         <table class="table">
             <thead>
                 <tr>

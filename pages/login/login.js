@@ -6,7 +6,7 @@ function doLogin(){
 			if(this.responseText==="FALSE"){
                 document.getElementById("login-ko").style.display="block";
 			}else{
-                //document.getElementById("login-ok").style.display="block";
+                document.getElementById("login-ok").style.display="block";
                 window.location.href = "../consolas/main.php";
 			}
 		}
