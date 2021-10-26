@@ -53,7 +53,7 @@ function getGamesId($id) {
     	$bd = bbddConexion();
 
         if(!is_null($bd)) {
-            $sql = $bd->prepare("SELECT * from game WHERE id_console = :id_console");
+            $sql = $bd->prepare("SELECT * from game WHERE id_console = :id");
             $params = array(
                 ':id' => $id,
             );

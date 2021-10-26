@@ -5,7 +5,9 @@ require_once "../utils/response.php";
 
 try {
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
-		$resp = getGames();
+		$id= $_GET['id'];
+		$resp = getGamesId($id);
+		//$resp = getGames();
 
 		if(is_null($resp))
 			echo getResponse("KO","Error interno de base de datos");
