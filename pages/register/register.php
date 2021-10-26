@@ -11,12 +11,17 @@
     <?php include_once "../../pages/header_footer/register_header.php"?>
     <div class="login_form">
         <h2>Thanks to join us!</h2>
-        <form class="formulario" onsubmit="return doRegister();" method="POST">
+        <form class="formulario" onsubmit="return doRegister()" method="POST">
         <input id="name" name="name" placeholder="Username"/><br>
         <input id="pass" name="pass" placeholder="Password"/><br>
         <input id="mail" name="mail" placeholder="eMail"/><br>
-        <input id="phone" name="phone" placeholder="Telephone"/><br>
+        <input id="phone" name="phone" placeholder="Phone number"/><br>
         <button id="btn-log" type="submit" name="submit">Submit</button><br>
+            
+        <p id="registro" style="display: none;">Registrado correctamente correcto!</p>
+        <p id="noregistro" style="display: none;">¡Error! Su usuario ya esta registrado</p>
+
+
         </form>
     </div>
 
