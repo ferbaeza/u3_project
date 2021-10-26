@@ -1,6 +1,6 @@
 function loadConsole(console, consolas) {
     let gameConsole='<div>';
-    gameConsole+='<div>';
+    gameConsole+='<div class="conquery">';
     gameConsole+='<h2>'+console.name+'</h2>';
     gameConsole+='<div><a href="games.php?id='+console.id_console+'"<div><img src='+console.imagen+'></div></div>';
     gameConsole+='</div></a>';
