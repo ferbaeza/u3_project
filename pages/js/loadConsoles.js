@@ -8,7 +8,8 @@ function loadConsole(console, consolas) {
 
     gameConsole+=btnConsole;
 
-    gameConsole+='<div><h2>'+console.name+'</h2></div>';
+    //gameConsole+='<div><h2>'+console.name+'</h2></div>';
+    //gameConsole+='<div><img src='+console.imagen+'></div>';
     gameConsole+='</div></a>';
 
     consolas.innerHTML+=gameConsole;
