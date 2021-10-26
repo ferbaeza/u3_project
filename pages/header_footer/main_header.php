@@ -9,7 +9,7 @@ $username = $_SESSION['user_loged'];
         <nav class="nav_uno">
             <ul>
                 <li class="bot_nav"><a href="../../pages/consolas/main.php">Main</a></li>
-                <li class="bot_nav"><a href="../../pages/consolas/nes.php">Nes</a></li>
+                <li class="bot_nav"><a href="../../pages/consolas/nes.php" id="1">Nes</a></li>
                 <li class="bot_nav"><a href="../../pages/consolas/snes.php">SNes</a></li>
                 <li class="bot_nav"><a href="../../pages/consolas/megadrive.php">Megadrive</a></li>
                 <li class="bot_nav"><a href="../../pages/consolas/mastersystem.php">MasterSystem</a></li>

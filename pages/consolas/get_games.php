@@ -11,9 +11,12 @@ try {
 
 		if(is_null($resp))
 			echo getResponse("KO","Error interno de base de datos");
-		else
+		else{
+			if(count($resp)<0)
+				echo getResponse("KO","No se han obtenido resultados");
+			else
 			echo getResponse("OK", "Juegos obtenidas correctamente", $resp);
-
+		}
 	} else {
 		echo getResponse("KO","Tipo de petición incorrecta");
 	}

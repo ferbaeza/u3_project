@@ -53,7 +53,10 @@ function loadGames() {
             }
 		}
 	}
-	xhttp.open("GET", "../consolas/get_games.php?", true);	
+    //let url = new URL(window.location.href);
+    //let id = url.searchParams.get("id");
+
+	xhttp.open("GET", "../consolas/get_games.php?id="+id, true);	
 	xhttp.send();	
 }
 //-------------------------------------

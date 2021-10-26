@@ -30,24 +30,6 @@ function getConsoles() {
 }
 
 
-
-
-function getGames() {
-    try {
-    	$bd = bbddConexion();
-
-        if(!is_null($bd)) {
-            $sql = $bd->prepare("SELECT * from game WHERE id_console = 1");
-            $sql->execute();
-            return $sql->fetchAll();
-        } else
-            return $bd;
-
-    } catch (PDOException $e) {
-       return null;
-    }
-}
-
 function getGamesId($id) {
     try {
     	$bd = bbddConexion();
@@ -59,6 +41,22 @@ function getGamesId($id) {
             );
             $sql->execute($params);
 
+            return $sql->fetchAll();
+        } else
+            return $bd;
+
+    } catch (PDOException $e) {
+       return null;
+    }
+}
+
+function getGames() {
+    try {
+    	$bd = bbddConexion();
+
+        if(!is_null($bd)) {
+            $sql = $bd->prepare("SELECT * from game WHERE id_console = 1");
+            $sql->execute();
             return $sql->fetchAll();
         } else
             return $bd;
