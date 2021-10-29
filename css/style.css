@@ -11,6 +11,8 @@ body{
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    border: 1px solid gray;
+
 }
 .nes, .snes, .megadrive, .mastersystem{
     display: flex;
@@ -26,3 +28,17 @@ body{
     border-radius: 20%;
 }
 
+#consolas{
+    border: 1px solid gray;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.conquery{
+    margin: auto;
+
+}
+.conquery img{
+    width: 30px;
+    height: 20px;
+    border-radius: 20%;
+}

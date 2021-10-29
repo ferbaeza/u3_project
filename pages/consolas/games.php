@@ -17,6 +17,7 @@
             <thead>
                 <tr>
                     <th>Id</th>
+                    <!--<th>Imagen</th>-->
                     <th>Name</th>
                     <th>Year</th>
                     <th>Description</th>

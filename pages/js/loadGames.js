@@ -3,6 +3,7 @@ function loadRow(game, tableBody) {
 
     row+='<tr>';
     row+='<th scope="row">'+game.id_game+'</th>';
+    //row+='<td>'+game.img+'</td>';
     row+='<td>'+game.name+'</td>';
     row+='<td>'+game.year+'</td>';
     row+='<td>'+game.description+'</td>';
