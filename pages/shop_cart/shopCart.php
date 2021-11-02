@@ -17,7 +17,6 @@
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
-                    <th>Imagen</th>
                     <th>Cantidad</th>
                     <th>Price</th>
                     <th>Total Price</th>
@@ -26,7 +25,7 @@
             <tbody id="tbody-container"></tbody>
         </table>
 
-        <p id="no-favourites-message" style="display: none;">Shop Cart Empty</p>
+        <p id="no-addShopCart-message" style="display: none;">Shop Cart Empty</p>
 
     </div>
 

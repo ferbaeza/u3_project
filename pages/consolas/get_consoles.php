@@ -8,9 +8,9 @@ try {
 		$resp = getConsoles();
 
 		if(is_null($resp))
-			echo getResponse("KO","Error interno de base de datos");
+			echo getResponse("KO","NOT CONEXION WITH BD");
 		else
-			echo getResponse("OK", "Juegos obtenidas correctamente", $resp);
+			echo getResponse("OK", "Game added to Shopcart successfully", $resp);
 
 	} else {
 		echo getResponse("KO","Tipo de petición incorrecta");

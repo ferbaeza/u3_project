@@ -17,8 +17,8 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <!--<th>Imagen</th>-->
                     <th>Name</th>
+                    <th>Imagen</th>
                     <th>Year</th>
                     <th>Description</th>
                     <th>Price</th>
@@ -27,6 +27,9 @@
             </thead>
             <tbody id="tbody-container"></tbody>
         </table>
+
+        <br>
+        <a href="../shop_cart/shopCart.php" role="button" class="btn btn-primary btn-sm">go to shopCart</a>
 
 
     </div>

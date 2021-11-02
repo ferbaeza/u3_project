@@ -5,15 +5,16 @@ function loadRow(game, tableBody) {
     row+='<th scope="row">'+game.id_game+'</th>';
     //row+='<td>'+game.img+'</td>';
     row+='<td>'+game.name+'</td>';
+    row+='<td><img src="'+game.img+'"style="height:140px;withd:100px"></td>';
     row+='<td>'+game.year+'</td>';
     row+='<td>'+game.description+'</td>';
     row+='<td>'+game.price+'</td>';
 
     let addBasketBtn='<td>';
-    addBasketBtn+='<button id='+game.id_game+'" role="button" class="btn btn-primary btn-sm">add..</button>';
+    addBasketBtn+='<button onclik="addShopCart('+game.id_game+')" href="../shop_cart/addShopCart.php" role="button" class="btn btn-primary btn-sm">add to Basket</button>';
     addBasketBtn+='</td>';
     row+=addBasketBtn;
-
+    
     row+='</tr>';
 
     tableBody.innerHTML+=row;
@@ -44,7 +45,7 @@ function loadGames() {
     var xhttp = new XMLHttpRequest();				
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-            
+            debugger;
             let response = JSON.parse(this.responseText);
 
             if(response.status=="OK") {
