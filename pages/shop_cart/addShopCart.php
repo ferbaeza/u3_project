@@ -1,11 +1,6 @@
 <?php
 require_once "../bbdd/conexion.php";
-
-$response=[
-	"status" => "",
-	"message " => "",
-	"data" => ""
-];
+require_once "../utils/response.php"
 
 try {
 	$idGame = $_POST["id_game"];
@@ -20,16 +15,16 @@ try {
 			]
 		];
 
-		setcookie('shopCart', json_encode($shopCart), time() + 3600 * 24);
+		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24);
 		
 	}else{
 
-		$shopCart = json_decode($_COOKIE['shopCart']);
+		$shopCartArray = json_decode($_COOKIE['shopCart']);
 
 		$found=false;
-		foreach($shopCart as $G) {
+		foreach($shopCartArray as $G) {
 
-			if(strcmp($G->id, $idFilm)===0) {
+			if(strcmp($G->id, $id_game)===0) {
 				$G->quantity += $quantity;
 
 				$found=true;
@@ -39,13 +34,13 @@ try {
 
 		if(!$found) {
 			$newgame = [
-				"id" => $idFilm,
+				"id_game" => $id_game,
 				"quantity" => $quantity
 			];
-			array_push($shopCart, $newgame);
+			array_push($shopCartArray, $newgame);
 		}
 		
-		setcookie('shopCart', json_encode($shopCart), time() + 3600 * 24);
+		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24);
 	}
 
 	$response["status"] = "OK";

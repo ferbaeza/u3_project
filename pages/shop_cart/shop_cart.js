@@ -1,4 +1,5 @@
-function addGame(id_game) {
+function add(id_game) {
+    debugger;
     var xhttp = new XMLHttpRequest();				
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -20,7 +21,7 @@ function addGame(id_game) {
 	xhttp.send(params);	
 }
 
-function loadGame(gamesJSON) {
+function loadShopcart(gamesJSON) {
 
     let tableBody = document.getElementById("tbody-container");
     tableBody.innerHTML="";
@@ -40,7 +41,7 @@ function loadGame(gamesJSON) {
             row+='<td>'+game.price+'</td>';
 
             let addBasketBtn='<td>';
-            addBasketBtn+='<button onclick="addGame('+game.id+')" role="button" class="btn btn-primary btn-sm">Añadir Juego</button>';
+            addBasketBtn+='<button onclick="add('+game.id+')" role="button" class="btn btn-primary btn-sm">Añadir Juego</button>';
             addBasketBtn+='</td>';
             row+=addBasketBtn;
 
@@ -50,7 +51,7 @@ function loadGame(gamesJSON) {
     }
 }
 
-function loadGame() {
+function loadCart() {
     var xhttp = new XMLHttpRequest();				
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -70,5 +71,5 @@ function loadGame() {
 	xhttp.send();	
 }
 document.addEventListener("DOMContentLoaded", function(event) { 
-    loadFilms();
+    //loadCart();
 });
