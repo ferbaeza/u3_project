@@ -70,6 +70,5 @@ function loadGame() {
 	xhttp.send();	
 }
 document.addEventListener("DOMContentLoaded", function(event) { 
-
     loadFilms();
 });

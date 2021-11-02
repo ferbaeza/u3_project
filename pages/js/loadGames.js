@@ -1,3 +1,29 @@
+function addShopCart(id_game) {
+    //Añado una película como favorita a las cookies
+    var xhttp = new XMLHttpRequest();				
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+            
+            let response = JSON.parse(this.responseText);
+
+            if(response.status=="OK") {
+                alert("Juego add correctamente!")
+            } else {
+                alert("Se ha producido un error, inténtalo de nuevo más tarde");
+            }
+		}
+	}
+
+    //Hago una petición para que guarde en las cookies la película
+    let params="idgame="+id_game+"&quantity=1";
+
+	xhttp.open("POST", "../shop_cart/addShopCart.php?id_game="+id_game, true);	
+	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	xhttp.send(params);	
+}
+
+
+
 function loadRow(game, tableBody) {
     let row='<tr>';
 
@@ -11,7 +37,7 @@ function loadRow(game, tableBody) {
     row+='<td>'+game.price+'</td>';
 
     let addBasketBtn='<td>';
-    addBasketBtn+='<button onclik="addShopCart('+game.id_game+')" href="../shop_cart/addShopCart.php" role="button" class="btn btn-primary btn-sm">add to Basket</button>';
+    addBasketBtn+='<button onclik="addShopCart('+game.id_game+')">add to Basket</button>';
     addBasketBtn+='</td>';
     row+=addBasketBtn;
     
