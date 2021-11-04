@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 function loadTableGame(shopCartJSON) {
 =======
 function add(id_game) {
@@ -26,6 +27,9 @@ function add(id_game) {
 
 function loadShopcart(gamesJSON) {
 >>>>>>> 034cbb740a5ffe946cd1f480321351a602e41e7e
+=======
+function loadTableGame(shopCartJSON) {
+>>>>>>> henry
 
     let tableBody = document.getElementById("tbody-container");
     tableBody.innerHTML="";
@@ -44,10 +48,14 @@ function loadShopcart(gamesJSON) {
             row+='<td>'+game.quantity+'</td>';
             row+='<td>'+game.price+'</td>';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> henry
             row+='<td>'+game.total_price+'</td>';
              row+='</tr>';
         
             
+<<<<<<< HEAD
 =======
 
             let addBasketBtn='<td>';
@@ -57,16 +65,22 @@ function loadShopcart(gamesJSON) {
 
             row+='</tr>';
 >>>>>>> 034cbb740a5ffe946cd1f480321351a602e41e7e
+=======
+>>>>>>> henry
             tableBody.innerHTML+=row;
         }
     }
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function loadShopCart() {
 =======
 function loadCart() {
 >>>>>>> 034cbb740a5ffe946cd1f480321351a602e41e7e
+=======
+function loadShopCart() {
+>>>>>>> henry
     var xhttp = new XMLHttpRequest();				
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -91,12 +105,18 @@ function loadCart() {
 
 document.addEventListener("DOMContentLoaded", function(event) { 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> henry
 
     loadShopCart();
 });
 
+<<<<<<< HEAD
 
 =======
     //loadCart();
 });
 >>>>>>> 034cbb740a5ffe946cd1f480321351a602e41e7e
+=======
+>>>>>>> henry
