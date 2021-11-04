@@ -1,7 +1,29 @@
+function addShopCart(id_game) {
+    var xhttp = new XMLHttpRequest();				
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+            console.log((this.responseText));
+            
+            let response = JSON.parse(this.responseText);
+
+            if(response.status=="OK") {
+                alert("juego añadido correctamente!")
+            } else {
+                alert("No se a podido añadir el juego");
+            }
+		}
+	}
+
+    let params="id_game="+id_game+"&quantity=1";
+
+	xhttp.open("POST", "../shop_cart/addShopCart.php", true);	
+	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	xhttp.send(params);	
+}
+
 function loadRow(game, tableBody) {
     let row='<tr>';
 
-    row+='<tr>';
     row+='<th scope="row">'+game.id_game+'</th>';
     //row+='<td>'+game.img+'</td>';
     row+='<td>'+game.name+'</td>';
@@ -11,7 +33,7 @@ function loadRow(game, tableBody) {
     row+='<td>'+game.price+'</td>';
 
     let addBasketBtn='<td>';
-    addBasketBtn+='<button onclik="addShopCart('+game.id_game+')" href="../shop_cart/addShopCart.php" role="button" class="btn btn-primary btn-sm">add to Basket</button>';
+    addBasketBtn+='<button onclick="addShopCart('+game.id_game+')" id='+game.id_game+' role="button" class="btn btn-primary btn-sm">add to Basket</button>';
     addBasketBtn+='</td>';
     row+=addBasketBtn;
     
@@ -45,7 +67,6 @@ function loadGames() {
     var xhttp = new XMLHttpRequest();				
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-            debugger;
             let response = JSON.parse(this.responseText);
 
             if(response.status=="OK") {

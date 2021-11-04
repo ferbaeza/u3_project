@@ -1,11 +1,6 @@
 <?php
 require_once "../bbdd/conexion.php";
-
-$response=[
-	"status" => "",
-	"message " => "",
-	"data" => ""
-];
+require_once "../utils/response.php";
 
 try {
 	$definitiveArray=[];
@@ -15,10 +10,21 @@ try {
 		$shopCart = json_decode($_COOKIE['shopCart']);
 
 		foreach($shopCart as $g) {
+
+			$bd = bbddConexion();
+
+			$sqlPrepared = $bd->prepare("SELECT id_game, name, precio, classification from game where id_game = id");
+			$sqlPrepared->execute();
+			$x;
+
 			
 			$gameData= [
-				"id" => $g->id,
-				"quantity" => $g->quantity
+
+				'id' => $g->id,
+				'quantity' => $g->quantity,
+				'name' => $x->name,
+				'price'=> $x->price,
+				'total_price'=> $x->price * $g->quantity
 			];
 
 			array_push($definitiveArray, $gameData);

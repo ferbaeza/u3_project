@@ -1,35 +1,31 @@
 <?php
 require_once "../bbdd/conexion.php";
+require_once "../utils/response.php";
 
-$response=[
-	"status" => "",
-	"message " => "",
-	"data" => ""
-];
 
 try {
 	$idGame = $_POST["id_game"];
 	$quantity = intval($_POST["quantity"]);
 
-	if(!isset($_COOKIE['shopCart'])){
+	if(!isset($_COOKIE['shopCart'])){ 
 		
 		$shopCartArray = [
 			[
-				"id_game" => $id_game,
+				"id" => $idGame,
 				"quantity" => $quantity
 			]
 		];
 
-		setcookie('shopCart', json_encode($shopCart), time() + 3600 * 24);
+		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24);
 		
 	}else{
 
 		$shopCart = json_decode($_COOKIE['shopCart']);
 
 		$found=false;
+		
 		foreach($shopCart as $G) {
-
-			if(strcmp($G->id, $idFilm)===0) {
+			if(strcmp($G->id, $idGame)===0) {
 				$G->quantity += $quantity;
 
 				$found=true;
@@ -39,7 +35,7 @@ try {
 
 		if(!$found) {
 			$newgame = [
-				"id" => $idFilm,
+				"id" => $idGame,
 				"quantity" => $quantity
 			];
 			array_push($shopCart, $newgame);

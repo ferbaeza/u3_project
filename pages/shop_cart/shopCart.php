@@ -25,7 +25,7 @@
             <tbody id="tbody-container"></tbody>
         </table>
 
-        <p id="no-addShopCart-message" style="display: none;">Shop Cart Empty</p>
+        <p id="no-addShopCart-message" style="display: none;">Shop Cart is Empty</p>
 
     </div>
 
