@@ -13,7 +13,8 @@ function loadTableGame(shopCartJSON) {
 
             let row='<tr>';
             row+='<tr>';
-            row+='<th scope="row">'+game.id_game+'</th>';
+            row+='<th scope="row">'+game.id+'</th>';
+            row+='<td>'+game.name+'</td>';
             row+='<td>'+game.quantity+'</td>';
             row+='<td>'+game.price+'</td>';
             row+='<td>'+game.total_price+'</td>';
@@ -35,7 +36,7 @@ function loadShopCart() {
             if(response.status=="OK") {
 
                 
-                loadDataInTable(response.data);
+                loadTableGame(response.data);
             } else {
                 alert("Se ha producido un error, inténtalo de nuevo más tarde");
             }
@@ -49,7 +50,6 @@ function loadShopCart() {
 
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-
     loadShopCart();
 });
 

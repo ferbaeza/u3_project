@@ -10,40 +10,35 @@ try {
 		$shopCart = json_decode($_COOKIE['shopCart']);
 
 		foreach($shopCart as $g) {
+			$id = $g->id;
 
 			$bd = bbddConexion();
 
-			$sqlPrepared = $bd->prepare("SELECT id_game, name, precio, classification from game where id_game = id");
-			$sqlPrepared->execute();
-			$x;
+			$sqlPrepared = $bd->prepare("SELECT * FROM game where id_game = :id");
+			$params = array(
+				":id" => $id,
+			);
+			$sqlPrepared->execute($params);
+			$game= $sqlPrepared->fetchAll();
+			foreach($game as $x){
+				$gameData= [
 
+					'id' => $g->id,
+					'quantity' => $g->quantity,
+					'name' => $x['name'],
+					'price'=> $x['price'],
+					'total_price'=> $x['price'] * $g->quantity
+				];
 			
-			$gameData= [
-
-				'id' => $g->id,
-				'quantity' => $g->quantity,
-				'name' => $x->name,
-				'price'=> $x->price,
-				'total_price'=> $x->price * $g->quantity
-			];
-
 			array_push($definitiveArray, $gameData);
+			}
 		}
 		
 	}
-
-	$response["status"] = "OK";
-	$response["message"] = "lista juegos obtenido correctamente";
-	$response["data"] = $definitiveArray;
-
-	echo json_encode($response);
-
+	echo getResponse("OK", "Cokkie", $definitiveArray);
 
 } catch (Exception $e) {
 
-	
-	$response["status"] = "KO";
-	$response["message"] = "Error al obtener el juego";
+	echo getResponse("KO", "NOT cookie set");
 
-	echo json_encode($response);
 }

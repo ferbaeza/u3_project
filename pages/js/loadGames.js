@@ -1,27 +1,3 @@
-function add(id_game) {
-    debugger;
-    var xhttp = new XMLHttpRequest();				
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-            
-            let response = JSON.parse(this.responseText);
-
-            if(response.status=="OK") {
-                alert("Game successfully obtained")
-            } else {
-                alert("Error getting game");
-            }
-		}
-	}
-
-    let params="id_game="+id_game+"&quantity=1";
-
-	xhttp.open("POST", "../shop_cart/addShopCart.php", true);	
-	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xhttp.send(params);	
-}
-
-
 function loadRow(game, tableBody) {
     let row='<tr>';
     row+='<tr>';
@@ -34,14 +10,13 @@ function loadRow(game, tableBody) {
     row+='<td>'+game.price+'</td>';
 
     let addBasketBtn='<td>';
-    addBasketBtn+='<button role="button" onclik="add('+game.id_game+')">add to Basket</button>';
+    addBasketBtn+='<button onclick="add('+game.id_game+')" role="button" >add to Basket</button>';
     addBasketBtn+='</td>';
     row+=addBasketBtn;
     
     row+='</tr>';
 
     tableBody.innerHTML+=row;
-    debugger;
 }
 
 function loadDataInTable(gameJSON, tableBody) {

@@ -1,30 +1,23 @@
 <?php
-require_once "../bbdd/conexion.php";
 require_once "../utils/response.php";
-
 
 try {
 	$idGame = $_POST["id_game"];
-	$quantity = intval($_POST["quantity"]);
+	$quantity = $_POST["quantity"];
 
 	if(!isset($_COOKIE['shopCart'])){ 
-		
 		$shopCartArray = [
 			[
 				"id" => $idGame,
 				"quantity" => $quantity
 			]
 		];
-
 		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24);
-		
 	}else{
-
-		$shopCart = json_decode($_COOKIE['shopCart']);
-
+		$shopCartArray = json_decode($_COOKIE['shopCart']);
 		$found=false;
 		
-		foreach($shopCart as $G) {
+		foreach($shopCartArray as $G) {
 			if(strcmp($G->id, $idGame)===0) {
 				$G->quantity += $quantity;
 
@@ -32,23 +25,20 @@ try {
 				break;
 			}
 		}
-
 		if(!$found) {
 			$newgame = [
 				"id" => $idGame,
 				"quantity" => $quantity
 			];
-			array_push($shopCart, $newgame);
+			array_push($shopCartArray, $newgame);
 		}
 		
-		setcookie('shopCart', json_encode($shopCart), time() + 3600 * 24);
+		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24);
 	}
 	
-	echo getResponse("OK", "Cokkie")
-	echo json_encode($response);
+	echo getResponse("OK", "Cokkie");
 
 } catch (Exception $e) {
-	echo getResponse("KO", "NOT cookie set")
+	echo getResponse("KO", "NOT cookie set");
 
-	echo json_encode($response);
 }

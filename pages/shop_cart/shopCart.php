@@ -5,7 +5,7 @@
     <title>U3_Project</title>
     <link href="../../css/header.css" rel="stylesheet" type="text/css">
     <link href="../../css/consolas.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="shop_cart.js"></script>
+    <script type="text/javascript" src="../js/shop_cart.js"></script>
 </head>
 <body>
     <?php include_once "../../pages/header_footer/main_header.php"?>
