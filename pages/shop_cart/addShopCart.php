@@ -43,15 +43,12 @@ try {
 		
 		setcookie('shopCart', json_encode($shopCart), time() + 3600 * 24);
 	}
-
-	$response["status"] = "OK";
-	$response["message"] = "Game added successfully";
-
+	
+	echo getResponse("OK", "Cokkie")
 	echo json_encode($response);
 
 } catch (Exception $e) {
-		$response["status"] = "KO";
-	$response["message"] = "Error  game could not be added";
+	echo getResponse("KO", "NOT cookie set")
 
 	echo json_encode($response);
 }

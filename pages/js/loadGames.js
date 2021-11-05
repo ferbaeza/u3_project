@@ -1,29 +1,15 @@
-<<<<<<< HEAD
-function addShopCart(id_game) {
-    var xhttp = new XMLHttpRequest();				
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-            console.log((this.responseText));
-=======
 function add(id_game) {
     debugger;
     var xhttp = new XMLHttpRequest();				
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
->>>>>>> 034cbb740a5ffe946cd1f480321351a602e41e7e
             
             let response = JSON.parse(this.responseText);
 
             if(response.status=="OK") {
-<<<<<<< HEAD
-                alert("juego añadido correctamente!")
-            } else {
-                alert("No se a podido añadir el juego");
-=======
                 alert("Game successfully obtained")
             } else {
                 alert("Error getting game");
->>>>>>> 034cbb740a5ffe946cd1f480321351a602e41e7e
             }
 		}
 	}
@@ -35,16 +21,10 @@ function add(id_game) {
 	xhttp.send(params);	
 }
 
-<<<<<<< HEAD
-function loadRow(game, tableBody) {
-    let row='<tr>';
-
-=======
 
 function loadRow(game, tableBody) {
     let row='<tr>';
     row+='<tr>';
->>>>>>> 034cbb740a5ffe946cd1f480321351a602e41e7e
     row+='<th scope="row">'+game.id_game+'</th>';
     //row+='<td>'+game.img+'</td>';
     row+='<td>'+game.name+'</td>';
@@ -54,17 +34,14 @@ function loadRow(game, tableBody) {
     row+='<td>'+game.price+'</td>';
 
     let addBasketBtn='<td>';
-<<<<<<< HEAD
-    addBasketBtn+='<button onclick="addShopCart('+game.id_game+')" id='+game.id_game+' role="button" class="btn btn-primary btn-sm">add to Basket</button>';
-=======
-    addBasketBtn+='<button onclik="add('+game.id_game+')">add to Basket</button>';
->>>>>>> 034cbb740a5ffe946cd1f480321351a602e41e7e
+    addBasketBtn+='<button role="button" onclik="add('+game.id_game+')">add to Basket</button>';
     addBasketBtn+='</td>';
     row+=addBasketBtn;
     
     row+='</tr>';
 
     tableBody.innerHTML+=row;
+    debugger;
 }
 
 function loadDataInTable(gameJSON, tableBody) {
