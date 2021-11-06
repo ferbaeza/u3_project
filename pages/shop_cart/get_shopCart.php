@@ -6,9 +6,7 @@ try {
 	$definitiveArray=[];
 	
 	if(isset($_COOKIE['shopCart'])){
-		
 		$shopCart = json_decode($_COOKIE['shopCart']);
-
 		foreach($shopCart as $g) {
 			$id = $g->id;
 
@@ -29,16 +27,11 @@ try {
 					'price'=> $x['price'],
 					'total_price'=> $x['price'] * $g->quantity
 				];
-			
 			array_push($definitiveArray, $gameData);
 			}
-		}
-		
+		}	
 	}
 	echo getResponse("OK", "Cokkie", $definitiveArray);
-
 } catch (Exception $e) {
-
 	echo getResponse("KO", "NOT cookie set");
-
 }
