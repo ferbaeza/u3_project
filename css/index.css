@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(59, 61, 61);
+    font-size: 22px;
+}
+
+.login{
+    align-content: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 7px;
+  }
+  
+li .welcome {
+float: left;
+}
+.welcome {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+text-align: center;
+font-size: 26px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li .welcome:hover {
+background-color: #111;
+}
+.main_index{
+    width: max-content;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+p{
+    background-color: rgb(59, 61, 61);
+    font-size: 29px;
+    color: whitesmoke;
+    text-align: center;
+}
