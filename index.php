@@ -9,7 +9,9 @@
     
 </head>
 <body>
-    <?php  session_destroy()?>
+    <?php  
+    session_start();
+    session_destroy();?>
     <?php include_once "./pages/header_footer/index_header.php"?>
 
     
