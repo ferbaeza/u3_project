@@ -25,8 +25,8 @@
             <tbody id="tbody-container"></tbody>
         </table>
 
-        <p id="no-addShopCart-message" style="display: none;">Shop Cart is Empty</p>
-
+        <p id="nocookies" style="display: none;">Shop Cart is Empty</p>
+        <div id="purchase"><button class="purchase">Finalizar Compra</button></div>
     </div>
 
 </body>

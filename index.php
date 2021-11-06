@@ -9,7 +9,9 @@
     
 </head>
 <body>
+    <?php  session_destroy()?>
     <?php include_once "./pages/header_footer/index_header.php"?>
+
     
     <div class="main_index">
         <a href="./pages/login/login.php"><img id="logo_index" src="./img/index_logo.png"></a>

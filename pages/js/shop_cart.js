@@ -4,7 +4,8 @@ function loadTableGame(shopCartJSON) {
     tableBody.innerHTML="";
 
     if(shopCartJSON.length<=0) {
-        document.getElementById("no-favourites-message").style.display="block";
+        document.getElementById("purchase").style.display="none";
+        document.getElementById("nocookies").style.display="block";
     } else {
 
         for(let i in shopCartJSON) {
