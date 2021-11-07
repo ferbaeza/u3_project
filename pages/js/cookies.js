@@ -6,7 +6,10 @@ function add(id_game) {
             let response = JSON.parse(this.responseText);
 
             if(response.status=="OK") {
-                alert("Game successfully obtained")
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                //alert("Game successfully obtained")
             } else {
                 alert("Error getting game");
             }
@@ -18,4 +21,6 @@ function add(id_game) {
 	xhttp.open("POST", "../shop_cart/addShopCart.php", true);	
 	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	xhttp.send(params);	
+
+    
 }

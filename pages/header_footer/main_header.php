@@ -21,7 +21,7 @@ echo($uphone);
                 <li class="bot_nav"><a href="../../pages/consolas/main.php">Main</a></li>
                 <li class="login" id="user_loged">'.$username.'</li>
                 <li class="login"><a href="../../index.php">Logout</a></li>
-                <li class="carrito"><a href="../../pages/shop_cart/shopCart.php">Carrito 🛒</a></li>
+                <li class="carrito"><a href="../../pages/shop_cart/shopCart.php">ShopCart 🛒</a></li>
             </ul>
                 
         </nav>
