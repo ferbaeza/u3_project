@@ -7,10 +7,11 @@ try{
 	$user= $_POST['name'];
 	$pass = $_POST['pass'];	//es necesario cambiar en bbdd los datos de la tabla user(name=user y subname=passwd)
 	if(!is_null($bd)){
-		$login = $bd->prepare("SELECT * FROM user where user = :user and passwd = :pass ");
+		$login = $bd->prepare("SELECT * FROM user where user = :user and passwd = :pass  ");
 
 		$login->bindParam(':user', $user);
 		$login->bindParam(':pass', $pass);
+		//$login->bindParam(':mail', $mail);
 		$login->execute();
 		$a= $login->rowCount();
 

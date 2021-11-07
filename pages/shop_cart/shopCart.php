@@ -7,8 +7,10 @@
     <link href="../../css/consolas.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../js/shop_cart.js"></script>
 </head>
-<body>
-    <?php include_once "../../pages/header_footer/main_header.php"?>
+<body>  
+    <?php include_once "../utils/sesion.php";
+
+    include_once "../../pages/header_footer/main_header.php"?>
     <div class="main">
     <h1>Shoping Cart</h1>
 

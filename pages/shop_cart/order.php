@@ -8,7 +8,9 @@
     <script type="text/javascript" src="../js/order.js"></script>
 </head>
 <body>
-    <?php include_once "../../pages/header_footer/main_header.php"?>
+<?php include_once "../utils/sesion.php";
+   
+    include_once "../../pages/header_footer/main_header.php"?>
     <div class="main">
     <h1>Confirm Order</h1>
     <p id="nouser" style="display: none;">No user Info</p>

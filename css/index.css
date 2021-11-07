@@ -1,7 +1,7 @@
-body{
+body,p ,nav{
     background-color: rgb(59, 61, 61);
-    font-size: 22px;
 }
+
 
 .login{
     align-content: center;
@@ -37,9 +37,16 @@ background-color: #111;
     margin: 0 auto;
     padding-top: 5%;
 }
-p{
+#click{
     background-color: rgb(59, 61, 61);
     font-size: 29px;
     color: whitesmoke;
     text-align: center;
+    animation-name: texto;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes texto {
+    from {color: whitesmoke; font-size: 29px;}
+    to {color: #c62d77; font-size: 34px;}
 }

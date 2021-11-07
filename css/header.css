@@ -15,18 +15,18 @@ ul {
   }
   
 li {
-float: left;
+    float: left;
 }
 
 li a {
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-text-align: center;
-font-size: 22px;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    font-size:  22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #user_loged {
     display: block;
@@ -36,7 +36,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     text-align: center;
     font-size: 22px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     }
 
 li a:hover {
@@ -46,3 +46,16 @@ background-color: #111;
 .carrito, .login{
     float: right;
 }
+#logout{
+    margin-top: 10%;
+    margin-right: 11px;
+    height: 40px;
+    background-color: tomato;
+    border-color: none;
+    border:none;
+    border-radius: 8px;
+    color: whitesmoke;
+    font-size: 19px;
+    box-shadow: 0 4px 8px 0 rgba(121, 121, 114, 0.178), 0 6px 20px 0 rgba(59, 57, 57, 0.295);
+    text-align: center;
+  }

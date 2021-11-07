@@ -11,6 +11,7 @@
     <!--<script type="text/javascript" src="../shop_cart/shop_cart.js"></script>-->
 </head>
 <body>
+    <?php include_once "../utils/sesion.php"?>
     <?php include_once "../../pages/header_footer/main_header.php"?>
     <div class="main">    
         <div class="supernes">
