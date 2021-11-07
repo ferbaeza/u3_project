@@ -3,6 +3,16 @@ require_once "../bbdd/conexion.php";
 
 session_start();
 $username = $_SESSION['user_loged'];
+$upass= $_SESSION['passwd_loged'];
+$umail = $_SESSION['mail_loged'];
+$uphone = $_SESSION['phone_loged'];
+
+echo($username);
+echo($upass);
+echo($umail);
+echo($uphone);
+
+
 
 
     echo '<div class="top_nav">

@@ -19,7 +19,7 @@ function loadTableGame(shopCartJSON) {
             row+='<td>'+game.quantity+'</td>';
             row+='<td>'+game.price+'</td>';
             row+='<td>'+game.total_price+'</td>';
-             row+='</tr>';
+            row+='</tr>';
         
             
             tableBody.innerHTML+=row;

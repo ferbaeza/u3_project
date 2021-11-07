@@ -10,8 +10,8 @@
 
 </head>
 <body>
-    <?php include_once "../../pages/header_footer/main_header.php"?>
-    
+<?php include_once "../../pages/header_footer/main_header.php"?>
+   
     <div class="main_consolas">
         <div id="consolas"></div>
     </div>

@@ -17,6 +17,9 @@ try{
 		if ($a==1){
 			session_start();
 			$_SESSION['user_loged']=$user;
+			$_SESSION['passwd_loged']=$upass;
+			$_SESSION['mail_loged']=$umail;
+			$_SESSION['phone_loged']=$uphone;
 			echo "TRUE";
 		}else{
 			echo "FALSE";

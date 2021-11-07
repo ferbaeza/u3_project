@@ -11,9 +11,9 @@
     <?php include_once "../../pages/header_footer/main_header.php"?>
     <div class="main">
     <h1>Confirm Order</h1>
+    <p id="nouser" style="display: none;">No user Info</p>
     <div class="userdetails">
-
-
+        <div id="user-info"></div>        
     </div>
 
         <table class="table_shopCart">

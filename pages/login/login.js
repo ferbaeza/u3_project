@@ -27,14 +27,3 @@ function doLogin(){
 
 
 
-/*
-let answer = JSON.parse(this.responseText);
-if(response.status=="OK"){
-	document.getElementById("login-ko").style.display="block";
-}else if(response.status=="KO"){
-	document.getElementById("login-ok").style.display="block";
-	window.location.href = "../consolas/main.php";
-}else if(response.status=="EXIST"){
-	alert("This mail is already used");
-}
-*/
