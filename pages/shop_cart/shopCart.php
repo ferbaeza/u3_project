@@ -15,13 +15,16 @@
     include_once "../../pages/header_footer/main_header.php"?>
     <div class="user">
         <div class="shop_userCart">
-            <h3><?php echo $_SESSION['user_loged']." "; echo $_SESSION['mail_loged']." "; echo $_SESSION['phone_loged'];?></h3>
+            <h3><?php 
+            echo "<span id='user'>Usuario: </span>".$_SESSION['user_loged']."<span id='user'> email: </span>";
+            echo $_SESSION['mail_loged']."<span id='user'> phone: </span>"; 
+            echo $_SESSION['phone_loged'];?></h3>
         </div>
 
     </div>
-    <div class="main">
+    <div class="main_shop">
     <h1>Shoping Cart</h1>
-
+        <div class="tabla">
         <table class="table_shopCart">
             <thead class="list_shop">
                 <tr>
@@ -36,7 +39,7 @@
             </thead>
             <tbody id="tbody-container"></tbody>
         </table>
-
+        </div>
         <p id="nocookies" style="display: none;">Shop Cart is Empty</p>
         <div id="purchase" href="./order.php"><a href="./order.php"><button class="purchase">Realizar Compra</button></a></div>
     </div>

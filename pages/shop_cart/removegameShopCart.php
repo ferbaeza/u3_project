@@ -3,41 +3,19 @@ require_once "../utils/response.php";
 
 try {
 	$idGame = $_POST["id_game"];
-	$quantity = $_POST["quantity"];
-
-	if(!isset($_COOKIE['shopCart'])){ 
-		$shopCartArray = [
-			[
-				"id" => $idGame,
-				"quantity" => $quantity
-			]
-		];
-		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24);
-	}else{
-		$shopCartArray = json_decode($_COOKIE['shopCart']);
-		$found=false;
-		
-		foreach($shopCartArray as $G) {
-			if(strcmp($G->id, $idGame)===0) {
-                unset($shopCartArray[$G->id] );
-				setcookie("shopCart", json_encode($shopCartArray), time() + 3600 * 24);
-            
-				break;
-			}
-		}
-		if(!$found) {
-			$newgame = [
-				"id" => $idGame,
-				"quantity" => $quantity
-			];
-			array_push($shopCartArray, $newgame);
-		}
-		
-		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24);
-	}
 	
+	$shopCartArray = json_decode($_COOKIE['shopCart']);
+	$array=[];
+	foreach($shopCartArray as $i){
+		if($i->id == $idGame){
+			setcookie("shopCart", "", time() - 3600);
+			break;
+		}else{
+			array_push($array, $i);
+		}
+	}
+	setcookie('shopCart', json_encode($array), time() + 3600 * 24);
 	echo getResponse("OK", "Cokkie");
-
 } catch (Exception $e) {
 	echo getResponse("KO", "NOT cookie set");
 

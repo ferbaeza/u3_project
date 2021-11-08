@@ -9,15 +9,24 @@
 </head>
 <body>
 <?php include_once "../utils/sesion.php";
-   
-    include_once "../../pages/header_footer/main_header.php"?>
-    <div class="main">
+
+include_once "../../pages/header_footer/main_header.php"?>
+<div class="user">
+        <div class="shop_userCart">
+            <h3><?php 
+            echo "<span id='user'>Usuario: </span>".$_SESSION['user_loged']."<span id='user'> email: </span>";
+            echo $_SESSION['mail_loged']."<span id='user'> phone: </span>"; 
+            echo $_SESSION['phone_loged'];?></h3>
+        </div>
+
+
+    <div class="main_shop">
     <h1>Confirm Order</h1>
     <p id="nouser" style="display: none;">No user Info</p>
     <div class="userdetails">
         <div id="user-info"></div>        
     </div>
-
+    <div class="tabla">
         <table class="table_shopCart">
             <thead class="list_shop">
                 <tr>
@@ -30,7 +39,7 @@
             </thead>
             <tbody id="tbody-container"></tbody>
         </table>
-
+    </div>
         <p id="nocookies" style="display: none;">Shop Cart is Empty</p>
         <div id="purchase"><button class="purchase">Finalizar Compra</button></div>
     </div>
