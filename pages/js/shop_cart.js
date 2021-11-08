@@ -19,6 +19,14 @@ function loadTableGame(shopCartJSON) {
             row+='<td>'+game.quantity+'</td>';
             row+='<td>'+game.price+'</td>';
             row+='<td>'+game.total_price+'</td>';
+            let modifyBasketBtn='<td>';
+            modifyBasketBtn+='<button onclick="less('+game.id_game+')" role="button" > - </button><button onclick="add('+game.id_game+')" role="button" > + </button>';
+            modifyBasketBtn+='</td>';
+            row+=modifyBasketBtn;
+            let removeBasketBtn='<td>';
+            removeBasketBtn+='<button onclick="remove('+game.id_game+')" role="button" >Remove to Basket</button>';
+            removeBasketBtn+='</td>';
+            row+=removeBasketBtn;
             row+='</tr>';
         
             
@@ -35,8 +43,6 @@ function loadShopCart() {
             let response = JSON.parse(this.responseText);
 
             if(response.status=="OK") {
-
-                
                 loadTableGame(response.data);
             } else {
                 alert("Se ha producido un error, inténtalo de nuevo más tarde");
@@ -48,8 +54,6 @@ function loadShopCart() {
 	xhttp.open("GET", "get_shopCart.php", true);	
 	xhttp.send();	
 }
-
-
 document.addEventListener("DOMContentLoaded", function(event) { 
     loadShopCart();
 });

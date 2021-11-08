@@ -1,6 +1,7 @@
 <?php
 require_once "../bbdd/conexion.php";
 require_once "../utils/response.php";
+include_once "../utils/sesion.php";
 
 
 try {

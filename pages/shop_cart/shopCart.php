@@ -5,7 +5,9 @@
     <title>U3_Project</title>
     <link href="../../css/header.css" rel="stylesheet" type="text/css">
     <link href="../../css/consolas.css" rel="stylesheet" type="text/css">
+    <link href="../../css/toast.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../js/shop_cart.js"></script>
+    <script type="text/javascript" src="../js/cookies.js"></script>
 </head>
 <body>  
     <?php include_once "../utils/sesion.php";
@@ -22,6 +24,8 @@
                     <th>Cantidad</th>
                     <th>Price</th>
                     <th>Total Price</th>
+                    <th>Modify</th>
+                    <th>Remove</th>
                 </tr>
             </thead>
             <tbody id="tbody-container"></tbody>
@@ -30,6 +34,7 @@
         <p id="nocookies" style="display: none;">Shop Cart is Empty</p>
         <div id="purchase" href="./order.php"><a href="./order.php"><button class="purchase">Realizar Compra</button></a></div>
     </div>
+    <div id="snackbar">Game add it correctly</div>
 
 </body>
 </html>
