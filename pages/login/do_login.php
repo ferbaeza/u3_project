@@ -13,14 +13,16 @@ try{
 		$login->bindParam(':pass', $pass);
 		//$login->bindParam(':mail', $mail);
 		$login->execute();
+		$b=$login->fetchAll();
 		$a= $login->rowCount();
 
 		if ($a==1){
+			$a= $b[0];
 			session_start();
-			$_SESSION['user_loged']=$user;
-			$_SESSION['passwd_loged']=$upass;
-			$_SESSION['mail_loged']=$umail;
-			$_SESSION['phone_loged']=$uphone;
+			$_SESSION['user_loged']=$a['user'];  //ver bbdd los campos
+			$_SESSION['id_loged']=$a['id_user'];
+			$_SESSION['mail_loged']=$a['mail'];
+			$_SESSION['phone_loged']=$a['phone_number'];
 			echo "TRUE";
 		}else{
 			echo "FALSE";

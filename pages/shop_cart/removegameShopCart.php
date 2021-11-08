@@ -19,9 +19,9 @@ try {
 		
 		foreach($shopCartArray as $G) {
 			if(strcmp($G->id, $idGame)===0) {
-				$G->quantity += $quantity;
-
-				$found=true;
+                unset($shopCartArray[$G->id] );
+				setcookie("shopCart", json_encode($shopCartArray), time() + 3600 * 24);
+            
 				break;
 			}
 		}

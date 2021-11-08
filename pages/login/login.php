@@ -13,8 +13,8 @@
     <div class="login_form">
         <h2>Start with your user and password</h2>
         <form class="formulario" onsubmit="return doLogin()" method="POST">
-            <input id="name" name="name">
-            <input id="pass" name="pass">
+            <input id="name" name="name" placeholder="Insert your username">
+            <input id="pass" name="pass"  placeholder="Insert your password">
             <button type="submit" name="submit" id="btn-log">Login</button><br>
             
             <p id="login-ok" style="display: none;">¡Login correcto!</p>

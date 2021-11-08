@@ -50,3 +50,8 @@
     border:none;
 }
 
+.shop_userCart{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}

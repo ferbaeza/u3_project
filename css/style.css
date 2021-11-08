@@ -13,3 +13,27 @@ body{
     grid-template-columns: repeat(2, 1fr);
 
 }
+
+.main_user {
+    
+    width: 60%;
+    height: 60%;
+    box-shadow: 0 13px 8px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    background-color: rgb(59, 61, 61);
+    margin: 0 auto;
+    margin-top: 10%;
+}
+  
+.user_id {
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 12px;
+
+}
+#logo{
+      width: 100px;
+      height: 100px;
+      border-radius: 60%;
+
+}

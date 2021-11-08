@@ -13,6 +13,12 @@
     <?php include_once "../utils/sesion.php";
 
     include_once "../../pages/header_footer/main_header.php"?>
+    <div class="user">
+        <div class="shop_userCart">
+            <h3><?php echo $_SESSION['user_loged']." "; echo $_SESSION['mail_loged']." "; echo $_SESSION['phone_loged'];?></h3>
+        </div>
+
+    </div>
     <div class="main">
     <h1>Shoping Cart</h1>
 
@@ -35,6 +41,9 @@
         <div id="purchase" href="./order.php"><a href="./order.php"><button class="purchase">Realizar Compra</button></a></div>
     </div>
     <div id="snackbar">Game add it correctly</div>
+    <div id="snackbaraddone">You add it one more game</div>
+    <div id="snackbaremove">Remove it!</div>
+    <div id="snackbarless">You remove one unit of this game</div>
 
 </body>
 </html>
