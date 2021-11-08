@@ -79,3 +79,40 @@
     color: tomato;
     font-size: small;
 }
+#less{
+    background-color: tomato;
+    font-size: 23px;
+    color: whitesmoke;
+    border-radius: 30%;
+    border: none;
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+}
+#plus{
+    background-color: green;
+    font-size: 23px;
+    color: whitesmoke;
+    border-radius: 30%;
+    border: none;
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+}
+#remove{
+    background-color: rgb(59,61,61);
+    font-size: 23px;
+    color: whitesmoke;
+    border-radius: 7%;
+    border: none;
+    margin-left: 8px;
+    width: 230px;
+    height: 30px;
+}
+#remove:hover{
+    background-color: tomato;
+}
+#less:hover, #plus:hover{
+    color: rgb(59,61,61);
+    
+}

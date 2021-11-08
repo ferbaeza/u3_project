@@ -20,11 +20,11 @@ function loadTableGame(shopCartJSON) {
             row+='<td>'+game.price+'</td>';
             row+='<td>'+game.total_price+'</td>';
             let modifyBasketBtn='<td>';
-            modifyBasketBtn+='<button onclick="less('+game.id+')" role="button" > - </button><button onclick="addone('+game.id+')" role="button" > + </button>';
+            modifyBasketBtn+='<button onclick="less('+game.id+')" role="button" id="less"> - </button><button onclick="addone('+game.id+')" role="button" id="plus"> + </button>';
             modifyBasketBtn+='</td>';
             row+=modifyBasketBtn;
             let removeBasketBtn='<td>';
-            removeBasketBtn+='<button onclick="remove('+game.id+')" role="button" >Remove to Basket</button>';
+            removeBasketBtn+='<button onclick="remove('+game.id+')" role="button" id="remove">Remove to Basket</button>';
             removeBasketBtn+='</td>';
             row+=removeBasketBtn;
             row+='</tr>';
