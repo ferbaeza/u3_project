@@ -1,4 +1,8 @@
 <?php
 
-include "../"
+require "./createInvoice.php";
+
+
+var_dump($info);
+
 ?>

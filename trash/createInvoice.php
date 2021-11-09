@@ -1,5 +1,5 @@
 <?php
-require_once "../bbdd/conexion.php";
+require_once "../pages/bbdd/conexion.php";
 //require_once "../utils/response.php";
 
 try {
@@ -32,7 +32,8 @@ try {
 		}	
 	}
     $info= json_encode($definitiveArray);
+	var_dump($info);
 	//echo getResponse("OK", "Cokkie", $definitiveArray);
 } catch (Exception $e) {
-	echo("KO", "NOT cookie set");
+	echo("NNOOOOOOO");
 }
