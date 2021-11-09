@@ -8,7 +8,13 @@
     <script type="text/javascript" src="../js/order.js"></script>
 </head>
 <body>
-<?php include_once "../utils/sesion.php";
+<?php 
+
+session_start(); 
+//if(!isset($_SESSION['user_loged'])){	
+//    header("Location: ../../index.php");
+//}
+
 
 include_once "../../pages/header_footer/main_header.php"?>
 <div class="user">
