@@ -3,9 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require './Exception.php';
-require './PHPMailer.php';
-require './SMTP.php';
+require './mailUtils/Exception.php';
+require './mailUtils/PHPMailer.php';
+require './mailUtils/SMTP.php';
 
 require_once '../pages/utils/sesion.php';
 

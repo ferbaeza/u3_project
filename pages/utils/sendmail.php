@@ -1,4 +1,5 @@
 <?php
+/*
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -6,6 +7,25 @@ use PHPMailer\PHPMailer\Exception;
 require './mail/Exception.php';
 require './mail/PHPMailer.php';
 require './mail/SMTP.php';
+*/
+
+$shopCart = json_decode($_COOKIE['shopCart']);
+var_dump($shopCart);
+
+$array = $definitiveArray;
+foreach($array as $x){
+    echo $x->name;
+}
+/*
+        'id' => $g->id,
+        'quantity' => $g->quantity,
+        'name' => $x['name'],
+        'price'=> $x['price'],
+        'total_price'=> $x['price'] * $g->quantity
+
+
+
+
 $mail = new PHPMailer(true);
 
 try {
@@ -34,3 +54,6 @@ try {
 } catch (Exception $e) {
     echo "Order could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
+
+*/
