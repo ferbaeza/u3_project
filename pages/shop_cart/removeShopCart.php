@@ -1,44 +1,26 @@
 <?php
 require_once "../utils/response.php";
+$idGame = $_POST["id_game"];
+$quantity = $_POST["quantity"];
+
+
 
 try {
-	$idGame = $_POST["id_game"];
-	$quantity = $_POST["quantity"];
-
-	if(!isset($_COOKIE['shopCart'])){ 
-		$shopCartArray = [
-			[
-				"id" => $idGame,
-				"quantity" => $quantity
-			]
-		];
-		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24);
-	}else{
-		$shopCartArray = json_decode($_COOKIE['shopCart']);
-		$found=false;
-		
-		foreach($shopCartArray as $G) {
-			if(strcmp($G->id, $idGame)===0) {
-				$G->quantity += $quantity;
-
-				$found=true;
-				break;
-			}
+	$shopCartArray = json_decode($_COOKIE['shopCart']);
+	$array=[];
+	foreach($shopCartArray as $G) {
+		if(strcmp($G->id, $idGame)===0) {
+			$G->quantity += $quantity;
 		}
-		if(!$found) {
-			$newgame = [
-				"id" => $idGame,
-				"quantity" => $quantity
-			];
-			array_push($shopCartArray, $newgame);
+		if($G->quantity == 0){
+			setcookie("shopCart", "", time() - 3600);
+		}else{
+			array_push($array, $G);
 		}
 		
-		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24);
-	}
-	
+	}setcookie('shopCart', json_encode($array), time() + 3600 * 24);
 	echo getResponse("OK", "Cokkie");
 
-} catch (Exception $e) {
+}catch (Exception $e) {
 	echo getResponse("KO", "NOT cookie set");
-
 }

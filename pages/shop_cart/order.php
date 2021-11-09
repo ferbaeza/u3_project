@@ -6,17 +6,15 @@
     <link href="../../css/header.css" rel="stylesheet" type="text/css">
     <link href="../../css/consolas.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../js/order.js"></script>
+    <script type="text/javascript" src="../js/logout.js"></script>
 </head>
 <body>
 <?php 
 
-session_start(); 
-//if(!isset($_SESSION['user_loged'])){	
-//    header("Location: ../../index.php");
-//}
-
-
-include_once "../../pages/header_footer/main_header.php"?>
+//session_start(); 
+include_once "../utils/sesion.php";
+include_once "../../pages/header_footer/main_header.php";
+?>
 <div class="user">
         <div class="shop_userCart">
             <h3><?php 

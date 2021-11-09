@@ -59,8 +59,7 @@ function loadShopCart() {
 });
 
 
-
-
+/*
 function loadUserDiv(userJSON){
     let UserDiv = document.getElementById("user-info");
     UserDiv.innerHTML="";
@@ -86,9 +85,6 @@ function loadUserDiv(userJSON){
     }
 
 }
-
-
-
 function loadCustomerInfo() {
     var xhttp = new XMLHttpRequest();				
 	xhttp.onreadystatechange = function() {
@@ -108,3 +104,4 @@ function loadCustomerInfo() {
 document.addEventListener("DOMContentLoaded", function(event) { 
     loadCustomerInfo();
 });
+*/

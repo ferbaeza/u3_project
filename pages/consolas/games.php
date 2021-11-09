@@ -8,6 +8,7 @@
     <script type="text/javascript" src="../js/loadGames.js"></script>
     <link href="../../css/toast.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../js/cookies.js"></script>
+    <script type="text/javascript" src="../js/logout.js"></script>
     <!--<script type="text/javascript" src="../shop_cart/shop_cart.js"></script>-->
 </head>
 <body>

@@ -4,7 +4,7 @@ function doLogout(){
     let config = {
         method: 'POST'
     }
-  
+    
     fetch(urlRequest, config)
     .then((resp) => resp.json())
     .then((dataResp) => {
@@ -13,7 +13,7 @@ function doLogout(){
 			alert("Sesión cerrada correctamente!");
 			
 			//redirigir a login		
-			window.location.href = "login.php";
+			window.location.href = "../../index.php";
 
 		} else {
 			alert("Se ha producido un error, al cerrar sesión")
