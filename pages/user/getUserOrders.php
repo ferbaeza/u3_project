@@ -1,10 +1,10 @@
 <?php
 require_once "../bbdd/conexion.php";
 require_once "../utils/response.php";
-$user= $_SESSION['user_loged'];
+require_once "../utils/sesion.php";
 
 try {
-	$ListOrders=[];
+	$Listorder=[];
         $bd = bbddConexion();
 
         $sqlPrepared = $bd->prepare("SELECT * FROM neworder where id_user = :id");
@@ -15,15 +15,16 @@ try {
         $pedido= $sqlPrepared->fetchAll();
         foreach($pedido as $x){
             $pedidoData= [
-                'id' => $x['name'],
+                'id' => $id,
+                'id_order'=> $x['id_order'],
                 'date' => $x['date'],
                 'total'=> $x['total']
             ];
-            array_push($ListOrders, $pedidoData);
+            array_push($Listorder, $pedidoData);
         }
 			
 	
-	echo getResponse("OK", "Cokkie", $ListOrders);
+	echo getResponse("OK", "Cokkie", $Listorder);
 }catch (Exception $e) {
 	echo getResponse("KO", "NOT cookie set");
 }

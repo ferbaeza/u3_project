@@ -4,7 +4,7 @@
 	$umail=$_SESSION['mail_loged'];
 	$uphone= $_SESSION['phone_loged'];
 	$_SESSION['hora_conexion'];
-
+	$id= $_SESSION['user_id'];
 
 
 

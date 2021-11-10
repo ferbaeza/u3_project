@@ -43,3 +43,7 @@ body{
     font-size: 12px;
 
 }
+#tablaorders, th{
+    color: whitesmoke;
+    text-align: center;
+}

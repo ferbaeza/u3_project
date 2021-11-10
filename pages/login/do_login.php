@@ -25,6 +25,7 @@ try{
 			$_SESSION['mail_loged']=$a['mail'];
 			$_SESSION['phone_loged']=$a['phone_number'];
 			$_SESSION['hora_conexion']=$fecha;
+			$_SESSION['user_id']=$a['id_user'];
 			echo "TRUE";
 		}else{
 			echo "FALSE";
