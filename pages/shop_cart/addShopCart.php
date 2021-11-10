@@ -12,7 +12,7 @@ try {
 				"quantity" => $quantity
 			]
 		];
-		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24,'/');
+		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24, '/' );
 	}else{
 		$shopCartArray = json_decode($_COOKIE['shopCart']);
 		$found=false;
@@ -33,7 +33,7 @@ try {
 			array_push($shopCartArray, $newgame);
 		}
 		
-		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24,'/');
+		setcookie('shopCart', json_encode($shopCartArray), time() + 3600 * 24, '/' );
 	}
 	
 	echo getResponse("OK", "Cokkie");

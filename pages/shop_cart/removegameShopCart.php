@@ -8,12 +8,12 @@ try {
 	$array=[];
 	foreach($shopCartArray as $i){
 		if($i->id == $idGame){
-			setcookie("shopCart", "", time() - 3600);
+			setcookie("shopCart", "", time() - 3600, '/' );
 		}else{
 			array_push($array, $i);
 		}
 	}
-	setcookie('shopCart', json_encode($array), time() + 3600 * 24);
+	setcookie('shopCart', json_encode($array), time() + 3600 * 24, '/' );
 	echo getResponse("OK", "Cokkie");
 } catch (Exception $e) {
 	echo getResponse("KO", "NOT cookie set");

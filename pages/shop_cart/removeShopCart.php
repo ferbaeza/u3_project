@@ -13,12 +13,12 @@ try {
 			$G->quantity += $quantity;
 		}
 		if($G->quantity == 0){
-			setcookie("shopCart", "", time() - 3600);
+			setcookie("shopCart", "", time() - 3600, '/' );
 		}else{
 			array_push($array, $G);
 		}
 		
-	}setcookie('shopCart', json_encode($array), time() + 3600 * 24);
+	}setcookie('shopCart', json_encode($array), time() + 3600 * 24, '/' );
 	echo getResponse("OK", "Cokkie");
 
 }catch (Exception $e) {
