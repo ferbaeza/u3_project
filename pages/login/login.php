@@ -6,7 +6,7 @@
     <link href="../../css/header.css" rel="stylesheet" type="text/css">
     <link href="../../css/login.css" rel="stylesheet" type="text/css">
     <link href="../../css/index.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="./login.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
 </head>
 <body>
     <?php include_once "../header_footer/login_header.php"?>
