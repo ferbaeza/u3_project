@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>U3_Project</title>
-    <link href="../../css/header.css" rel="stylesheet" type="text/css">
-    <link href="../../css/consolas.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../js/order.js"></script>
 </head>
 <body>
-<?php 
 
-//session_start(); 
-include_once "../utils/sesion.php";
-include_once "../../pages/header_footer/main_header.php";
-?>
+<?php include_once "../utils/sesion.php";?>
 <div class="user">
-        <div class="shop_userCart">
+       <div class="shop_userCart">
             <h3><?php 
             echo "<span id='user'>Usuario: </span>".$_SESSION['user_loged']."<span id='user'> email: </span>";
             echo $_SESSION['mail_loged']."<span id='user'> phone: </span>"; 
             echo $_SESSION['phone_loged'];?></h3>
         </div>
+<?php
+$a = file_get_contents()
+
+?>
+
 
 
     <div class="main_shop">
@@ -43,8 +42,6 @@ include_once "../../pages/header_footer/main_header.php";
             <tbody id="tbody-container"></tbody>
         </table>
     </div>
-        <p id="nocookies" style="display: none;">Shop Cart is Empty</p>
-        <div id="purchase"><button class="purchase">Finalizar Compra</button></div>
     </div>
 
 </body>

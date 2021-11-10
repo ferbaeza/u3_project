@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>U3_Project</title>
-    <link href="../../css/header.css" rel="stylesheet" type="text/css">
-    <link href="../../css/consolas.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="../js/order.js"></script>
+    <script type="text/javascript" src="../pages/js/order.js"></script>
 </head>
 <body>
 <?php 
-
-//session_start(); 
-include_once "../utils/sesion.php";
-include_once "../../pages/header_footer/main_header.php";
 ?>
 <div class="user">
-        <div class="shop_userCart">
+       <!-- <div class="shop_userCart">
             <h3><?php 
             echo "<span id='user'>Usuario: </span>".$_SESSION['user_loged']."<span id='user'> email: </span>";
             echo $_SESSION['mail_loged']."<span id='user'> phone: </span>"; 
@@ -23,7 +17,7 @@ include_once "../../pages/header_footer/main_header.php";
         </div>
 
 
-    <div class="main_shop">
+    <div class="main_shop">-->
     <h1>Confirm Order</h1>
     <p id="nouser" style="display: none;">No user Info</p>
     <div class="userdetails">

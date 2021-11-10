@@ -38,13 +38,6 @@ function loadTableGame(shopCartJSON) {
 
 
 
-
-
-
-
-
-
-
 function addone(id_game) {
     var xhttp = new XMLHttpRequest();				
 	xhttp.onreadystatechange = function() {

@@ -1,5 +1,5 @@
 <?php
-/*
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -7,24 +7,6 @@ use PHPMailer\PHPMailer\Exception;
 require './mail/Exception.php';
 require './mail/PHPMailer.php';
 require './mail/SMTP.php';
-*/
-
-$shopCart = json_decode($_COOKIE['shopCart']);
-var_dump($shopCart);
-
-$array = $definitiveArray;
-foreach($array as $x){
-    echo $x->name;
-}
-/*
-        'id' => $g->id,
-        'quantity' => $g->quantity,
-        'name' => $x['name'],
-        'price'=> $x['price'],
-        'total_price'=> $x['price'] * $g->quantity
-
-
-
 
 $mail = new PHPMailer(true);
 
@@ -43,10 +25,12 @@ try {
     $mail->setFrom('cotoveta24@gmail.com', 'U3_Project');
     $mail->addAddress('baezeta@gmail.com', 'Joe User');     
     
+    $tetxt= file_get_contents('../../pages/shop_cart/factura.html', true);
+
     $mail->addBCC('cotoveta24@gmail.com');
     $mail->isHTML(true);                                 
     $mail->Subject = 'Pedido U3_Project';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>'.$tetxt;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
@@ -56,4 +40,3 @@ try {
 }
 
 
-*/
