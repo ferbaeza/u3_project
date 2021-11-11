@@ -23,7 +23,6 @@
 
 }
 .conquery{
-    
     margin-top: 10px;
     margin-left: 100px;
     width: 400px;
@@ -44,7 +43,7 @@
     width: 284px;
     padding: 10px 10px 20px 10px;
 }
-    .main_consolas{
+.main_consolas{
     background-color:whitesmoke;
     padding-top: 1%;
     width: 80%;
@@ -130,4 +129,33 @@
 #less:hover, #plus:hover{
     color: rgb(59,61,61);
     
+}
+#name{
+    width:150px;
+    text-align: center;
+}
+#name, #year{
+    padding-left: 10px;
+
+}
+#basket{
+    background-color: rgb(59,61,61);
+    border-radius: 4px;
+    color: whitesmoke;
+    font-weight: 400;
+    border:none;
+}
+#basket:hover{
+    background-color: tomato;
+    border:none;
+}   
+
+#des{
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#gameimg{
+    width: 80px;
+    height: 120px;
 }
