@@ -23,7 +23,8 @@
 
 }
 .conquery{
-    margin-top: 10%;
+    
+    margin-top: 10px;
     margin-left: 100px;
     width: 400px;
     height: 300px;
@@ -45,7 +46,7 @@
 }
     .main_consolas{
     background-color:whitesmoke;
-    padding-top: 5%;
+    padding-top: 1%;
     width: 80%;
     height: 100%;
     margin: 0 auto;

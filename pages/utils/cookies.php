@@ -3,7 +3,6 @@ require_once "../bbdd/conexion.php";
 
 
 function infocookies(){
-
 	try {
 		$definitiveArray=[];
 		$gameData=[];
@@ -12,9 +11,9 @@ function infocookies(){
 			$shopCart = json_decode($_COOKIE['shopCart']);
 			foreach($shopCart as $g) {
 				$id = $g->id;
+				$quantity = $g->quantity;
 
 				$bd = bbddConexion();
-
 				$sqlPrepared = $bd->prepare("SELECT * FROM game where id_game = :id");
 				$params = array(
 					":id" => $id,
