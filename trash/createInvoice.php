@@ -1,6 +1,7 @@
 <?php
 require_once "../pages/bbdd/conexion.php";
-//require_once "../utils/response.php";
+//require_once "../utils/response.php"; No es necesario
+
 
 try {
 	$definitiveArray=[];
