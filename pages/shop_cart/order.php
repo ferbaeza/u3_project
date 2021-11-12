@@ -44,7 +44,7 @@ include_once "../../pages/header_footer/main_header.php";
         </table>
     </div>
         <p id="nocookies" style="display: none;">Shop Cart is Empty</p>
-        <div id="purchase"><button class="purchase">Finalizar Compra</button></div>
+        <div id="purchase"><a href="../invoice/invoice.php"><button class="purchase">Finalizar Compra</button></a></div>
     </div>
 
 </body>
