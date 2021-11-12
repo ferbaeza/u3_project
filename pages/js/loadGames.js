@@ -1,16 +1,16 @@
 function loadRow(game, tableBody) {
     let row='<tr>';
     row+='<tr>';
-    row+='<th scope="row">'+game.id_game+'</th>';
+    row+='<th>'+game.id_game+'</th>';
     //row+='<td>'+game.img+'</td>';
-    row+='<td>'+game.name+'</td>';
-    row+='<td><img src="'+game.img+'"style="height:140px;withd:100px"></td>';
-    row+='<td>'+game.year+'</td>';
-    row+='<td>'+game.description+'</td>';
+    row+='<td id="name">'+game.name+'</td>';
+    row+='<td><img id="gameimg" src= "'+game.img+'"></td>';
+    row+='<td id="year">'+game.year+'</td>';
+    row+='<td id="des">'+game.description+'</td>';
     row+='<td>'+game.price+'</td>';
 
     let addBasketBtn='<td>';
-    addBasketBtn+='<button onclick="add('+game.id_game+')" role="button" >add to Basket</button>';
+    addBasketBtn+='<button id="basket" onclick="add('+game.id_game+')" role="button" >add to Basket</button>';
     addBasketBtn+='</td>';
     row+=addBasketBtn;
     
@@ -38,7 +38,7 @@ function loadDataInTable(gameJSON, tableBody) {
 
 function loadGames() {
 
-    let tableBody = document.getElementById("tbody-container");
+    let tableBody = document.getElementById("tbody-container-games");
     tableBody.innerHTML="";
 
     var xhttp = new XMLHttpRequest();				

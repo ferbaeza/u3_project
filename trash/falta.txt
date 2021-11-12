@@ -1,0 +1,3 @@
+crear pedido-- transaccion
+envio correo
+bbdd

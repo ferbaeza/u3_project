@@ -31,12 +31,10 @@
                     <th> 🛒</th>
                 </tr>
             </thead>
-            <tbody id="tbody-container"></tbody>
+            <tbody id="tbody-container-games"></tbody>
         </table>
         <div id="snackbar">Game add it correctly</div>
 
-        <br>
-        <a href="../shop_cart/shopCart.php" role="button" class="btn btn-primary btn-sm">go to shopCart</a>
 
 
     </div>

@@ -18,7 +18,11 @@ try {
 			array_push($array, $G);
 		}
 		
+<<<<<<< HEAD
 	}setcookie('shopCart', json_encode($array), time() + 3600 * 24. '/' );
+=======
+	}setcookie('shopCart', json_encode($array), time() + 3600 * 24, '/' );
+>>>>>>> ferorder
 	echo getResponse("OK", "Cokkie");
 
 }catch (Exception $e) {

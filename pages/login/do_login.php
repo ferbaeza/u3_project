@@ -15,6 +15,7 @@ try{
 		$login->execute();
 		$b=$login->fetchAll();
 		$a= $login->rowCount();
+		$fecha = date('D d M Y H:i a');
 
 		if ($a==1){
 			$a= $b[0];
@@ -23,6 +24,8 @@ try{
 			$_SESSION['id_loged']=$a['id_user'];
 			$_SESSION['mail_loged']=$a['mail'];
 			$_SESSION['phone_loged']=$a['phone_number'];
+			$_SESSION['hora_conexion']=$fecha;
+			$_SESSION['user_id']=$a['id_user'];
 			echo "TRUE";
 		}else{
 			echo "FALSE";

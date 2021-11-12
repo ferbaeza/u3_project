@@ -18,7 +18,7 @@ function doLogin(){
 	let pass = document.getElementById("pass").value;
     let login_info= "name="+name+"&pass="+pass;
 
-	xhttp.open("POST", "./do_login.php", true);	
+	xhttp.open("POST", "../login/do_login.php", true);	
 	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");// envío con POST requiere cabecera y cadena de parámetros
 	xhttp.send(login_info);	
 
