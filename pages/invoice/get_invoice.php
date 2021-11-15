@@ -1,6 +1,8 @@
 <?php
 require_once "../bbdd/conexion.php";
 require_once "../utils/response.php";
+require_once "../sendMail/sendmail.php";
+
 
 	$definitiveArray=[];
 	
@@ -19,6 +21,7 @@ require_once "../utils/response.php";
 				":id" => $id,
                 ":quantity" => $quantity,
                 ":stock" => $x['stock'],
+                ":price" => $x['price'],
                 ":total_price" => $x['total_price']
 			);
 			$sqlPrepared->execute($params);
@@ -38,7 +41,7 @@ require_once "../utils/response.php";
 			array_push($definitiveArray, $gameData);
 			}
             if ($g->quantity <= ':stock'){
-
+            
                     $error = false;
                     if(!$error){     
                         $sqlPrepared1 = $bd->prepare("INSERT INTO order (date, quantity) VALUES (date(), :quantity");
@@ -60,7 +63,6 @@ require_once "../utils/response.php";
                         $sqlPrepared2->execute($params);
                         $game= $sqlPrepared->fetchAll();
                         $resul2 = $bd->query($sqlPrepared2);
-                        $id_order = $db->lastInsertId();
  
                     if(!$result2){
                         $error = true;
@@ -92,11 +94,11 @@ require_once "../utils/response.php";
 
                    if($error= false){
                        $bd->commit();
-                       //$bd->close();
+                       $mail->send();
                        echo 'Transaciones realizadas con exito';
                    }else{
                        $bd->rollBack();
-                       //$bd->close();
+                      
                        echo 'base de datos no actualizada';
                     } 
                 

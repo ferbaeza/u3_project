@@ -59,7 +59,7 @@
             <h2>Thanks for you purchase</h2>
             <h3>We hope to see you again soon</h3>
             </div>
-
+            <div"><a href="../login/login.php"><button class="terminar">Terminar</button></a></div>
         </div>
 
     </body>

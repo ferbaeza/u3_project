@@ -1,6 +1,8 @@
 body{
     
-    max-width: 1200px;
+    max-width: 2500px;
+    display: flex;
+    justify-content: center;
 }
 
 .main{
@@ -9,13 +11,8 @@ body{
     justify-content:center
 
 }
-.logo{
-    background: url('logo.png');
-    max-width: px;
-    height: 350px;
-}
 .titulo{
-    background-color: red;
+    background-color: aquamarine;
     text-align: center;
     color: red;
 }
@@ -37,4 +34,9 @@ body{
     background-color: aquamarine;
     text-align: center;
     color: red;
+}
+.terminar{
+    background-color: red;
+    width: 100px;
+    height: 60px;
 }
